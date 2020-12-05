@@ -1,0 +1,11 @@
+{
+	"name": "newlink",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobStorage",
+		"typeProperties": {
+			"serviceEndpoint": "https://blbstrg.blob.core.windows.net",
+			"accountKind": "StorageV2"
+		}
+	}
+}
