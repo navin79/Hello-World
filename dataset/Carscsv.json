@@ -10,6 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
+				"fileName": "India-Car-Database_2020.csv",
 				"container": "cars2020"
 			},
 			"columnDelimiter": ",",
