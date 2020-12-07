@@ -31,6 +31,68 @@
 					"enableStaging": false,
 					"translator": {
 						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 1
+								},
+								"sink": {
+									"name": "ID",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"sink": {
+									"name": "Make",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"sink": {
+									"name": "Model",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"sink": {
+									"name": "Version1",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"sink": {
+									"name": "Status1",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"sink": {
+									"name": "Car_class",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"sink": {
+									"name": "Body_style",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"sink": {
+									"name": "Price_production_cars",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							}
+						],
 						"typeConversion": true,
 						"typeConversionSettings": {
 							"allowDataTruncation": true,
