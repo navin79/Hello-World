@@ -13,6 +13,7 @@
 				"container": "cars2020"
 			},
 			"columnDelimiter": ",",
+			"rowDelimiter": ",",
 			"escapeChar": "\\",
 			"quoteChar": "\""
 		},
