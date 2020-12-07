@@ -2,7 +2,7 @@
 	"name": "Carscsv",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "newlink",
+			"referenceName": "cars_LS",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"container": "contner1"
+				"container": "cars2020"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
