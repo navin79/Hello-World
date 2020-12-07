@@ -142,7 +142,7 @@
 						"referenceName": "cars_SQl",
 						"type": "DatasetReference",
 						"parameters": {
-							"tablename": "cars_SQl"
+							"tablename": "cars_2020"
 						}
 					}
 				]
