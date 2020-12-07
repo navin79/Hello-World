@@ -5,6 +5,11 @@
 			"referenceName": "cars",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"tablename": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "AzureSqlTable",
 		"schema": [
@@ -43,7 +48,10 @@
 		],
 		"typeProperties": {
 			"schema": "dbo",
-			"table": "cars_2020"
+			"table": {
+				"value": "@dataset().tablename",
+				"type": "Expression"
+			}
 		}
 	}
 }

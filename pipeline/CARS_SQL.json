@@ -131,13 +131,19 @@
 				"inputs": [
 					{
 						"referenceName": "Carscsv",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"filename": "Carscv"
+						}
 					}
 				],
 				"outputs": [
 					{
 						"referenceName": "cars_SQl",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"tablename": "cars_SQl"
+						}
 					}
 				]
 			}
