@@ -44,6 +44,10 @@
 								}
 							},
 							{
+								"source": {
+									"type": "String",
+									"ordinal": 2
+								},
 								"sink": {
 									"name": "Make",
 									"type": "String",
@@ -51,6 +55,10 @@
 								}
 							},
 							{
+								"source": {
+									"type": "String",
+									"ordinal": 3
+								},
 								"sink": {
 									"name": "Model",
 									"type": "String",
@@ -58,6 +66,10 @@
 								}
 							},
 							{
+								"source": {
+									"type": "String",
+									"ordinal": 4
+								},
 								"sink": {
 									"name": "Version1",
 									"type": "String",
@@ -65,6 +77,10 @@
 								}
 							},
 							{
+								"source": {
+									"type": "String",
+									"ordinal": 5
+								},
 								"sink": {
 									"name": "Status1",
 									"type": "String",
@@ -72,6 +88,10 @@
 								}
 							},
 							{
+								"source": {
+									"type": "String",
+									"ordinal": 6
+								},
 								"sink": {
 									"name": "Car_class",
 									"type": "String",
@@ -79,6 +99,10 @@
 								}
 							},
 							{
+								"source": {
+									"type": "String",
+									"ordinal": 7
+								},
 								"sink": {
 									"name": "Body_style",
 									"type": "String",
@@ -86,6 +110,10 @@
 								}
 							},
 							{
+								"source": {
+									"type": "String",
+									"ordinal": 8
+								},
 								"sink": {
 									"name": "Price_production_cars",
 									"type": "String",
