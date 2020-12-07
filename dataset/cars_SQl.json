@@ -1,0 +1,49 @@
+{
+	"name": "cars_SQl",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "cars",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "ID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Make",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Model",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Version1",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Status1",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Car_class",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Body_style",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Price_production_cars",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "cars_2020"
+		}
+	}
+}
