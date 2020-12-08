@@ -9,7 +9,9 @@
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
-				"type": "AzureBlobStorageLocation"
+				"type": "AzureBlobStorageLocation",
+				"fileName": "India-Car-Database_2020.csv",
+				"container": "cars2020"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
