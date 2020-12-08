@@ -131,7 +131,10 @@
 				"inputs": [
 					{
 						"referenceName": "Carscsv",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"filename": "filename"
+						}
 					}
 				],
 				"outputs": [
