@@ -5,20 +5,12 @@
 			"referenceName": "cars_LS",
 			"type": "LinkedServiceReference"
 		},
-		"parameters": {
-			"filename": {
-				"type": "string"
-			}
-		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": {
-					"value": "@dataset().filename",
-					"type": "Expression"
-				},
+				"fileName": "India-Car-Database_2020.csv",
 				"container": "cars2020"
 			},
 			"columnDelimiter": ",",
