@@ -2,7 +2,7 @@
 	"name": "DelimitedText1",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "demo",
+			"referenceName": "demostrg",
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
@@ -19,7 +19,7 @@
 					"value": "@dataset().filename",
 					"type": "Expression"
 				},
-				"container": "cars2020"
+				"container": "contner1"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
