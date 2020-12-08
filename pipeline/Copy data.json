@@ -16,10 +16,13 @@
 				"userProperties": [],
 				"typeProperties": {
 					"source": {
-						"type": "ExcelSource",
+						"type": "DelimitedTextSource",
 						"storeSettings": {
 							"type": "AzureBlobStorageReadSettings",
 							"recursive": true
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
 						}
 					},
 					"sink": {
@@ -45,7 +48,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "demo",
+						"referenceName": "csv",
 						"type": "DatasetReference"
 					}
 				],
