@@ -20,6 +20,10 @@
 					"type": "Expression"
 				},
 				"container": "cars2020"
+			},
+			"sheetIndex": {
+				"value": "@dataset().filename",
+				"type": "Expression"
 			}
 		},
 		"schema": []
