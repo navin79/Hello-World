@@ -5,6 +5,11 @@
 			"referenceName": "demo",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"source": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
