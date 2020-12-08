@@ -15,11 +15,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": {
-					"value": "@dataset().source",
-					"type": "Expression"
-				},
-				"container": "cars2020"
+				"fileName": "Population.xlsx",
+				"container": "demo"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",

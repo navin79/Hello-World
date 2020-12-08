@@ -49,12 +49,15 @@
 				"inputs": [
 					{
 						"referenceName": "csv",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"source": "demo.cs"
+						}
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "csv",
+						"referenceName": "DelimitedText1",
 						"type": "DatasetReference"
 					}
 				]
