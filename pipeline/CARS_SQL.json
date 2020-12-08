@@ -133,7 +133,7 @@
 						"referenceName": "Carscsv",
 						"type": "DatasetReference",
 						"parameters": {
-							"filename": "filename"
+							"filename": "carscs"
 						}
 					}
 				],
@@ -142,7 +142,7 @@
 						"referenceName": "cars_SQl",
 						"type": "DatasetReference",
 						"parameters": {
-							"tablename": "filename"
+							"tablename": "cars_2020"
 						}
 					}
 				]
