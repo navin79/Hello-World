@@ -2,7 +2,7 @@
 	"name": "DelimitedText1",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "cars_LS",
+			"referenceName": "demo",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
