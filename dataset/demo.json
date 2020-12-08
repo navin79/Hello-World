@@ -2,7 +2,7 @@
 	"name": "demo",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "demo",
+			"referenceName": "demostrg",
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
@@ -15,7 +15,11 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"container": "cars2020"
+				"fileName": {
+					"value": "@dataset().filename",
+					"type": "Expression"
+				},
+				"container": "contner1"
 			},
 			"sheetIndex": {
 				"value": "@dataset().filename",
