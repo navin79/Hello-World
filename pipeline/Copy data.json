@@ -49,7 +49,10 @@
 				"inputs": [
 					{
 						"referenceName": "csv",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"filename": "India-Car-Database_2020.csv"
+						}
 					}
 				],
 				"outputs": [
