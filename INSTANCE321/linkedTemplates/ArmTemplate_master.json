@@ -23,6 +23,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'cars_LS'"
 		},
+		"data flows_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'data flows'"
+		},
 		"demo_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'demo'"
@@ -73,6 +77,9 @@
 					},
 					"cars_LS_connectionString": {
 						"value": "[parameters('cars_LS_connectionString')]"
+					},
+					"data flows_connectionString": {
+						"value": "[parameters('data flows_connectionString')]"
 					},
 					"demo_connectionString": {
 						"value": "[parameters('demo_connectionString')]"

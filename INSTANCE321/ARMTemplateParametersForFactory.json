@@ -17,6 +17,9 @@
 		"cars_LS_connectionString": {
 			"value": ""
 		},
+		"data flows_connectionString": {
+			"value": ""
+		},
 		"demo_connectionString": {
 			"value": ""
 		},
