@@ -451,7 +451,6 @@
 				"typeProperties": {
 					"location": {
 						"type": "AzureBlobStorageLocation",
-						"fileName": "Movies.csv",
 						"container": "dataflows"
 					},
 					"columnDelimiter": ",",
