@@ -1,0 +1,12 @@
+{
+	"name": "AzureSqlDemo2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlTest",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": []
+	}
+}
