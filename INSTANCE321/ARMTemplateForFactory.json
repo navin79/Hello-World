@@ -1342,7 +1342,7 @@
 							"storedProcedureParameters": {
 								"Lastmodifiedtime": {
 									"value": {
-										"value": "@{activity('LkpNewWatermarkActivity').output.firstRow.NewWaterMarkvalue}",
+										"value": "@{activity('LkpNewWatermarkActivity').output.firstRow.NewWaterMark}",
 										"type": "Expression"
 									},
 									"type": "Datetime"
