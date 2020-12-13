@@ -1317,6 +1317,49 @@
 								"parameters": {}
 							}
 						]
+					},
+					{
+						"name": "UpdateWatermark",
+						"type": "SqlServerStoredProcedure",
+						"dependsOn": [
+							{
+								"activity": "Copy data",
+								"dependencyConditions": [
+									"Succeeded"
+								]
+							}
+						],
+						"policy": {
+							"timeout": "7.00:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"storedProcedureName": "[[dbo].[update_watermark]",
+							"storedProcedureParameters": {
+								"Lastmodifiedtime": {
+									"value": {
+										"value": "@{activity('lkpnewWatermarkActivity').output.firstRow.NewWaterMarkvalue}",
+										"type": "Expression"
+									},
+									"type": "Datetime"
+								},
+								"Tablename": {
+									"value": {
+										"value": "@{activity('lkpOldWatermark').output.firstRow.Tablename}",
+										"type": "Expression"
+									},
+									"type": "String"
+								}
+							}
+						},
+						"linkedServiceName": {
+							"referenceName": "AzureSqlTest",
+							"type": "LinkedServiceReference"
+						}
 					}
 				],
 				"annotations": []
@@ -1324,7 +1367,8 @@
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/AzureSqlTable1')]",
 				"[concat(variables('factoryId'), '/datasets/AzureSqlDemo2')]",
-				"[concat(variables('factoryId'), '/datasets/HWM')]"
+				"[concat(variables('factoryId'), '/datasets/HWM')]",
+				"[concat(variables('factoryId'), '/linkedServices/AzureSqlTest')]"
 			]
 		},
 		{
