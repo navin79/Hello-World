@@ -7,9 +7,21 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "INSTANCE321"
 		},
+		"AzureSqlDBDemo_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureSqlDBDemo'"
+		},
 		"AzureSqlDatabase1_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabase1'"
+		},
+		"AzureSqlTest_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureSqlTest'"
+		},
+		"AzureSqlwatermark_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureSqlwatermark'"
 		},
 		"Foreach_connectionString": {
 			"type": "secureString",
@@ -47,18 +59,6 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'newlink'"
 		},
-		"AzureSqlwatermark_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'AzureSqlwatermark'"
-		},
-		"AzureSqlDBDemo_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'AzureSqlDBDemo'"
-		},
-		"AzureSqlTest_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'AzureSqlTest'"
-		},
 		"containerUri": {
 			"type": "string",
 			"metadata": "URI to storage account containing linked ARM templates"
@@ -86,8 +86,17 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
+					"AzureSqlDBDemo_connectionString": {
+						"value": "[parameters('AzureSqlDBDemo_connectionString')]"
+					},
 					"AzureSqlDatabase1_connectionString": {
 						"value": "[parameters('AzureSqlDatabase1_connectionString')]"
+					},
+					"AzureSqlTest_connectionString": {
+						"value": "[parameters('AzureSqlTest_connectionString')]"
+					},
+					"AzureSqlwatermark_connectionString": {
+						"value": "[parameters('AzureSqlwatermark_connectionString')]"
 					},
 					"Foreach_connectionString": {
 						"value": "[parameters('Foreach_connectionString')]"
@@ -115,15 +124,6 @@
 					},
 					"newlink_connectionString": {
 						"value": "[parameters('newlink_connectionString')]"
-					},
-					"AzureSqlwatermark_connectionString": {
-						"value": "[parameters('AzureSqlwatermark_connectionString')]"
-					},
-					"AzureSqlDBDemo_connectionString": {
-						"value": "[parameters('AzureSqlDBDemo_connectionString')]"
-					},
-					"AzureSqlTest_connectionString": {
-						"value": "[parameters('AzureSqlTest_connectionString')]"
 					}
 				}
 			},

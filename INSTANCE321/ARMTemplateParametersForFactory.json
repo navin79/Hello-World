@@ -5,7 +5,16 @@
 		"factoryName": {
 			"value": "INSTANCE321"
 		},
+		"AzureSqlDBDemo_connectionString": {
+			"value": ""
+		},
 		"AzureSqlDatabase1_connectionString": {
+			"value": ""
+		},
+		"AzureSqlTest_connectionString": {
+			"value": ""
+		},
+		"AzureSqlwatermark_connectionString": {
 			"value": ""
 		},
 		"Foreach_connectionString": {
@@ -33,15 +42,6 @@
 			"value": ""
 		},
 		"newlink_connectionString": {
-			"value": ""
-		},
-		"AzureSqlwatermark_connectionString": {
-			"value": ""
-		},
-		"AzureSqlDBDemo_connectionString": {
-			"value": ""
-		},
-		"AzureSqlTest_connectionString": {
 			"value": ""
 		}
 	}
