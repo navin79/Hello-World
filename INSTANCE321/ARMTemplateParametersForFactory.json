@@ -8,7 +8,13 @@
 		"AzureSqlDatabase1_connectionString": {
 			"value": ""
 		},
+		"Foreach_connectionString": {
+			"value": ""
+		},
 		"InputBlob_connectionString": {
+			"value": ""
+		},
+		"SQLdatabase_link_connectionString": {
 			"value": ""
 		},
 		"cars_connectionString": {
@@ -27,6 +33,15 @@
 			"value": ""
 		},
 		"newlink_connectionString": {
+			"value": ""
+		},
+		"AzureSqlwatermark_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDBDemo_connectionString": {
+			"value": ""
+		},
+		"AzureSqlTest_connectionString": {
 			"value": ""
 		}
 	}

@@ -11,9 +11,17 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabase1'"
 		},
+		"Foreach_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'Foreach'"
+		},
 		"InputBlob_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'InputBlob'"
+		},
+		"SQLdatabase_link_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'SQLdatabase_link'"
 		},
 		"cars_connectionString": {
 			"type": "secureString",
@@ -38,6 +46,18 @@
 		"newlink_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'newlink'"
+		},
+		"AzureSqlwatermark_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureSqlwatermark'"
+		},
+		"AzureSqlDBDemo_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureSqlDBDemo'"
+		},
+		"AzureSqlTest_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureSqlTest'"
 		},
 		"containerUri": {
 			"type": "string",
@@ -69,8 +89,14 @@
 					"AzureSqlDatabase1_connectionString": {
 						"value": "[parameters('AzureSqlDatabase1_connectionString')]"
 					},
+					"Foreach_connectionString": {
+						"value": "[parameters('Foreach_connectionString')]"
+					},
 					"InputBlob_connectionString": {
 						"value": "[parameters('InputBlob_connectionString')]"
+					},
+					"SQLdatabase_link_connectionString": {
+						"value": "[parameters('SQLdatabase_link_connectionString')]"
 					},
 					"cars_connectionString": {
 						"value": "[parameters('cars_connectionString')]"
@@ -89,10 +115,39 @@
 					},
 					"newlink_connectionString": {
 						"value": "[parameters('newlink_connectionString')]"
+					},
+					"AzureSqlwatermark_connectionString": {
+						"value": "[parameters('AzureSqlwatermark_connectionString')]"
+					},
+					"AzureSqlDBDemo_connectionString": {
+						"value": "[parameters('AzureSqlDBDemo_connectionString')]"
+					},
+					"AzureSqlTest_connectionString": {
+						"value": "[parameters('AzureSqlTest_connectionString')]"
 					}
 				}
 			},
 			"dependsOn": []
+		},
+		{
+			"name": "INSTANCE321_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'INSTANCE321_ArmTemplate_0')]"
+			]
 		}
 	]
 }
