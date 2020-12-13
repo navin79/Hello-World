@@ -148,7 +148,7 @@
 						},
 						"Tablename": {
 							"value": {
-								"value": "@{activity('lkpOldWatermark').output.firstRow.NewWaterMarkvalue}",
+								"value": "@{activity('lkpOldWatermark').output.firstRow.Tablename}",
 								"type": "Expression"
 							},
 							"type": "String"
