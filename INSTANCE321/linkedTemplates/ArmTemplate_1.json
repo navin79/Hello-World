@@ -719,7 +719,7 @@
 						"typeProperties": {
 							"source": {
 								"type": "AzureSqlSource",
-								"sqlReaderQuery": "select * from data_src where LastModifytime>'@{activity(LkpOldWatermark).output.firsrRow.Watermarkvalue} and LastModifytime <= @{activity(LkpNewWatermarkActivity).ouput.firstRow.Watermarkvalue]",
+								"sqlReaderQuery": "select * from data_src where LastModifytime>'@{activity('LkpOldWatermark').output.firsrRow.WatermarkValue}' and LastModifytime <= '@{activity('LkpNewWatermarkActivity').ouput.firstRow.Watermarkvalue}'",
 								"queryTimeout": "02:00:00",
 								"partitionOption": "None"
 							},
