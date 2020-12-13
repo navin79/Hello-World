@@ -10,6 +10,13 @@
 						"type": "DatasetReference"
 					},
 					"name": "empinblbstrg"
+				},
+				{
+					"dataset": {
+						"referenceName": "scdtyp1",
+						"type": "DatasetReference"
+					},
+					"name": "reftable"
 				}
 			],
 			"sinks": [],
@@ -18,7 +25,7 @@
 					"name": "Exists1"
 				}
 			],
-			"script": "source(output(\n\t\t{Emp_No } as string,\n\t\t{Emp Name } as string,\n\t\t{Department } as string,\n\t\tCity as string,\n\t\tLastUpdated_Date as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> empinblbstrg\nempinblbstrg exists(ERROR_FUNCTION('') == ERROR_FUNCTION(''),\n\tnegate:true,\n\tbroadcast: 'auto')~> Exists1"
+			"script": "source(output(\n\t\t{Emp_No } as string,\n\t\t{Emp Name } as string,\n\t\t{Department } as string,\n\t\tCity as string,\n\t\tLastUpdated_Date as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> empinblbstrg\nsource(output(\n\t\tEmp_No as integer,\n\t\tEmp_Name as string,\n\t\tDepartment as string,\n\t\tCity as string,\n\t\tLastUpdated_Date as date\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false,\n\tisolationLevel: 'READ_UNCOMMITTED',\n\tformat: 'table') ~> reftable\nempinblbstrg, reftable exists(ERROR_FUNCTION('') == ERROR_FUNCTION(''),\n\tnegate:true,\n\tbroadcast: 'auto')~> Exists1"
 		}
 	}
 }
