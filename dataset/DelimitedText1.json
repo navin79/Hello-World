@@ -19,6 +19,7 @@
 					"value": "@dataset().filename",
 					"type": "Expression"
 				},
+				"folderPath": "childitems",
 				"container": "contner1"
 			},
 			"columnDelimiter": ",",
