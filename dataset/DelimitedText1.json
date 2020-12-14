@@ -19,7 +19,10 @@
 					"value": "@dataset().filename",
 					"type": "Expression"
 				},
-				"folderPath": "childitems",
+				"folderPath": {
+					"value": "CONCAT('Childitems-',today()')",
+					"type": "Expression"
+				},
 				"container": "contner1"
 			},
 			"columnDelimiter": ",",
