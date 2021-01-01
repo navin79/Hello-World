@@ -13,8 +13,12 @@
 				}
 			],
 			"sinks": [],
-			"transformations": [],
-			"script": "source(output(\n\t\tid as string,\n\t\tProducts as (name as string, modelname as string, manufacturer as string)[],\n\t\tpricerange as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false,\n\tdocumentForm: 'documentPerLine') ~> source1"
+			"transformations": [
+				{
+					"name": "Flatten1"
+				}
+			],
+			"script": "source(output(\n\t\tid as string,\n\t\tProducts as (name as string, modelname as string, manufacturer as string)[],\n\t\tpricerange as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false,\n\tdocumentForm: 'singleDocument') ~> source1\nsource1 foldDown(unroll(Products),\n\tmapColumn(\n\t\tid,\n\t\tname = Products.name,\n\t\tmodelname = Products.modelname,\n\t\tmanufacturer = Products.manufacturer,\n\t\tpricerange\n\t),\n\tskipDuplicateMapInputs: false,\n\tskipDuplicateMapOutputs: false) ~> Flatten1"
 		}
 	}
 }
